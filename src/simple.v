@@ -19,7 +19,6 @@
 
 module simple(
 	      input [2:0]  a,
-	input[1:0] select,
 	output reg [6:0] result); // remove reg if you use assign
 	
 // add your code here
@@ -27,7 +26,7 @@ module simple(
 	//try using case statements that has 8 values and we assign 
 	//perhaps bit shifting 
 	always @(*) begin 
-		case (select)
+		case ({a})
 		3'b000: result = 7b'0000000;
 		3'b001: result = 7b'0000001;
 		3'b010: result = 7b'0000011;
