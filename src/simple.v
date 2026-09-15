@@ -19,10 +19,26 @@
 
 module simple(
 	      input [2:0]  a,
-	      output reg [6:0] result);
-   
+	input[1:0] select,
+	output reg [6:0] result); // remove reg if you use assign
+	
 // add your code here
-   
+//could do an assign statement BUT it'd be messy as it handles if poorly
+	//try using case statements that has 8 values and we assign 
+	//perhaps bit shifting 
+	always @(*) begin 
+		case (select)
+		3'b000: result = b'0000000;
+		3'b001: result = b'0000001;
+		3'b010: result = b'0000011;
+	    3'b011: result = b'0000111;
+		3'b100: result = b'0001111;
+		3'b101: result = b'0011111;
+		3'b110: result = b'0111111;
+		3'b111: result = b'1111111;
+default: result = b'0000000;
+		endcase
+	end 
 endmodule
 
 
