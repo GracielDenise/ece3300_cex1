@@ -27,16 +27,18 @@ module simple(
 	//perhaps bit shifting 
 	always @(*) begin 
 		case (a)
-		0: result = 7b'0000000;
-		1: result = 7b'0000001;
-		2: result = 7b'0000011;
-	    3: result = 7b'0000111;
-		4: result = 7b'0001111;
-		5: result = 7b'0011111;
-		6: result = 7b'0111111;
-		7: result = 7b'1111111;
+			0: result = 7b'0000000;
+			1: result = 7b'0000001;
+			2: result = 7b'0000011;
+		    3: result = 7b'0000111;
+			4: result = 7b'0001111;
+			5: result = 7b'0011111;
+			6: result = 7b'0111111;
+			7: result = 7b'1111111;
 		endcase
 	end 
+
+	
 endmodule
 
 
