@@ -28,15 +28,15 @@ module simple(
 	//perhaps bit shifting 
 	always @(*) begin 
 		case (select)
-		3'b000: result = b'0000000;
-		3'b001: result = b'0000001;
-		3'b010: result = b'0000011;
-	    3'b011: result = b'0000111;
-		3'b100: result = b'0001111;
-		3'b101: result = b'0011111;
-		3'b110: result = b'0111111;
-		3'b111: result = b'1111111;
-default: result = b'0000000;
+		3'b000: result = 7b'0000000;
+		3'b001: result = 7b'0000001;
+		3'b010: result = 7b'0000011;
+	    3'b011: result = 7b'0000111;
+		3'b100: result = 7b'0001111;
+		3'b101: result = 7b'0011111;
+		3'b110: result = 7b'0111111;
+		3'b111: result = 7b'1111111;
+default: result = 7b'0000000;
 		endcase
 	end 
 endmodule
