@@ -18,14 +18,13 @@
 //
 
 module simple(
-	      input [2:0]  a,
-	output reg [6:0] result); // remove reg if you use assign
-	
+	    input [2:0]  a,
+		output reg [6:0] result);// remove reg if you use assign
 // add your code here
 //could do an assign statement BUT it'd be messy as it handles if poorly
 	//try using case statements that has 8 values and we assign 
 	//perhaps bit shifting 
-	always @(*) begin 
+	always @(*) begin
 		case (a)
 			0: result = 7b'0000000;
 			1: result = 7b'0000001;
@@ -36,9 +35,7 @@ module simple(
 			6: result = 7b'0111111;
 			7: result = 7b'1111111;
 		endcase
-	end 
-
-	
+	end
 endmodule
 
 
