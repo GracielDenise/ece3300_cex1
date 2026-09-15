@@ -26,7 +26,7 @@ module simple(
 	//try using case statements that has 8 values and we assign 
 	//perhaps bit shifting 
 	always @(*) begin 
-		case ({a})
+		case (a)
 		0: result = 7b'0000000;
 		1: result = 7b'0000001;
 		2: result = 7b'0000011;
